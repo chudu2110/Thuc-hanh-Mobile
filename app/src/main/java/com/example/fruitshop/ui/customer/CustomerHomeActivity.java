@@ -23,6 +23,7 @@ public class CustomerHomeActivity extends DashboardActivity {
         tvWelcome.setText("Xin chào, " + session.getDisplayName());
 
         bindMenu(R.id.btnBrowseFruits, CustomerFruitListActivity.class);
+        bindMenu(R.id.btnOrderHistory, OrderHistoryActivity.class);
         bindLogout(R.id.btnLogout);
     }
 }

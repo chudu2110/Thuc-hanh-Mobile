@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * Customer: xem & tìm trái cây đang bán (đã loại hàng hết hạn / hết hàng),
- * xem hạn sử dụng và thông tin chi tiết.
+ * xem hạn sử dụng và đặt hàng.
  */
 public class CustomerFruitListActivity extends BaseFruitListActivity {
 
@@ -33,7 +33,7 @@ public class CustomerFruitListActivity extends BaseFruitListActivity {
 
     @Override
     protected String buildSummary(List<Fruit> fruits) {
-        return fruits.size() + " sản phẩm còn hạn · Chạm để xem chi tiết";
+        return fruits.size() + " sản phẩm còn hạn · Chạm để xem chi tiết & đặt hàng";
     }
 
     @Override
@@ -48,7 +48,9 @@ public class CustomerFruitListActivity extends BaseFruitListActivity {
         new AlertDialog.Builder(this)
                 .setTitle(fruit.getName())
                 .setMessage(detail)
-                .setPositiveButton("Đóng", null)
+                .setPositiveButton("Đặt hàng", (d, w) ->
+                        new PlaceOrderDialog(this, fruit, session.getCustomerId(), this::refresh).show())
+                .setNegativeButton("Đóng", null)
                 .show();
     }
 }

@@ -28,6 +28,9 @@
         <activity android:name=".ui.admin.FruitFormActivity" />
         <activity android:name=".ui.customer.CustomerFruitListActivity" />
 
+        <!-- ===== NTDSuper: Order ===== -->
+        <activity android:name=".ui.admin.AdminOrderListActivity" />
+        <activity android:name=".ui.customer.OrderHistoryActivity" />
     </application>
 
 </manifest>
