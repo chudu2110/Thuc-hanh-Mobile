@@ -22,6 +22,7 @@ public class AdminDashboardActivity extends DashboardActivity {
         TextView tvWelcome = findViewById(R.id.tvWelcome);
         tvWelcome.setText("Xin chào Admin: " + session.getUsername());
 
+        bindMenu(R.id.btnManageFruits, AdminFruitListActivity.class);
         bindLogout(R.id.btnLogout);
     }
 }

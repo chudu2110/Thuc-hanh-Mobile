@@ -22,6 +22,7 @@ public class CustomerHomeActivity extends DashboardActivity {
         TextView tvWelcome = findViewById(R.id.tvWelcome);
         tvWelcome.setText("Xin chào, " + session.getDisplayName());
 
+        bindMenu(R.id.btnBrowseFruits, CustomerFruitListActivity.class);
         bindLogout(R.id.btnLogout);
     }
 }

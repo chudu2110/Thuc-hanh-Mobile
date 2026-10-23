@@ -23,6 +23,11 @@
         <activity android:name=".ui.admin.AdminDashboardActivity" />
         <activity android:name=".ui.customer.CustomerHomeActivity" />
 
+        <!-- ===== andangiudayne: Fruit & Expiry ===== -->
+        <activity android:name=".ui.admin.AdminFruitListActivity" />
+        <activity android:name=".ui.admin.FruitFormActivity" />
+        <activity android:name=".ui.customer.CustomerFruitListActivity" />
+
     </application>
 
 </manifest>

@@ -50,6 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(OrderTable.CREATE);
         db.execSQL(OrderItemTable.CREATE);
         seedAccounts(db);
+        FruitSeeder.seed(db);
     }
 
     @Override
